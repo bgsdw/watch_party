@@ -44,9 +44,95 @@ class _MyHomePageState extends State<MyHomePage> {
               LiveStatus(),
               SizedBox(height: 15),
               LiveChatStatus(),
+              SizedBox(height: 15),
+              TitleAndDescription(),
             ],
           ),
         ));
+  }
+}
+
+class TitleAndDescription extends StatelessWidget {
+  const TitleAndDescription({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Project: Adam',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              Text(
+                'Action, Adventure',
+                style: TextStyle(
+                  color: Colors.grey[500],
+                ),
+              ),
+              const SizedBox(width: 10),
+              Container(
+                width: 5,
+                height: 5,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                '1h 58m',
+                style: TextStyle(
+                  color: Colors.grey[500],
+                ),
+              ),
+              const SizedBox(width: 10),
+              Container(
+                width: 5,
+                height: 5,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                '2022',
+                style: TextStyle(
+                  color: Colors.grey[500],
+                ),
+              ),
+              const SizedBox(width: 10),
+              Container(
+                width: 5,
+                height: 5,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.grey,
+                ),
+              ),
+              const SizedBox(width: 10),
+              Text(
+                '6.7',
+                style: TextStyle(
+                  color: Colors.red[400],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -122,13 +208,13 @@ class LiveStatus extends StatelessWidget {
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Icon(
                 Icons.wifi,
-                color: Colors.red,
+                color: Colors.red[400],
               ),
-              SizedBox(width: 10),
-              Text(
+              const SizedBox(width: 10),
+              const Text(
                 'LIVE',
                 style: TextStyle(color: Colors.white),
               ),
