@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           const Icon(
-                            Icons.pause,
+                            Icons.pause_rounded,
                             color: Colors.white,
                           ),
                           Stack(
